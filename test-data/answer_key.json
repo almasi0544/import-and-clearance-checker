@@ -1,0 +1,305 @@
+[
+  {
+    "set": 1,
+    "layout": "A",
+    "description": "Clean set, first layout.",
+    "clean": true,
+    "expected_findings": [],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "pass",
+      "C5": "pass",
+      "C6": "pass",
+      "C7": "pass",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": null
+  },
+  {
+    "set": 2,
+    "layout": "B",
+    "description": "Clean set, second layout. The packing list has no container number (golden rule: check C7 is skipped).",
+    "clean": true,
+    "expected_findings": [],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "pass",
+      "C5": "pass",
+      "C6": "pass",
+      "C7": "skip",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": null
+  },
+  {
+    "set": 3,
+    "layout": "A",
+    "description": "Clean set, long item list (12 lines on the invoice and packing list). The bill of lading has no seal number.",
+    "clean": true,
+    "expected_findings": [],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "pass",
+      "C5": "pass",
+      "C6": "pass",
+      "C7": "pass",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": null
+  },
+  {
+    "set": 4,
+    "layout": "A",
+    "description": "Packing list says 500 cartons, bill of lading says 470.",
+    "clean": false,
+    "expected_findings": [
+      {
+        "check_id": "C4",
+        "severity": "high",
+        "documents": [
+          "packing_list",
+          "bill_of_lading"
+        ],
+        "field": "packages",
+        "values": {
+          "packing_list": 500,
+          "bill_of_lading": 470
+        }
+      }
+    ],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "FINDING",
+      "C5": "pass",
+      "C6": "pass",
+      "C7": "pass",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": "Packing list says 500 cartons, bill of lading says 470."
+  },
+  {
+    "set": 5,
+    "layout": "A",
+    "description": "Gross weight 2,500 kg on the packing list, 2,700 kg on the bill of lading (8 percent). Use as the demo example.",
+    "clean": false,
+    "expected_findings": [
+      {
+        "check_id": "C3",
+        "severity": "high",
+        "documents": [
+          "packing_list",
+          "bill_of_lading"
+        ],
+        "field": "gross_weight",
+        "values": {
+          "packing_list": 2500,
+          "bill_of_lading": 2700
+        }
+      }
+    ],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "FINDING",
+      "C4": "pass",
+      "C5": "pass",
+      "C6": "pass",
+      "C7": "pass",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": "Gross weight 2,500 kg on the packing list, 2,700 kg on the bill of lading (8 percent). Use as the demo example."
+  },
+  {
+    "set": 6,
+    "layout": "B",
+    "description": "Invoice says 5,000 units, packing list says 4,800.",
+    "clean": false,
+    "expected_findings": [
+      {
+        "check_id": "C5",
+        "severity": "high",
+        "documents": [
+          "commercial_invoice",
+          "packing_list"
+        ],
+        "field": "quantity",
+        "values": {
+          "commercial_invoice": 5000,
+          "packing_list": 4800
+        }
+      }
+    ],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "pass",
+      "C5": "FINDING",
+      "C6": "pass",
+      "C7": "pass",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": "Invoice says 5,000 units, packing list says 4,800."
+  },
+  {
+    "set": 7,
+    "layout": "B",
+    "description": "Consignee name on the bill of lading differs from the invoice and packing list. Two pair findings (invoice and bill of lading, packing list and bill of lading) or one grouped finding are both acceptable.",
+    "clean": false,
+    "expected_findings": [
+      {
+        "check_id": "C1",
+        "severity": "high",
+        "documents": [
+          "commercial_invoice",
+          "packing_list",
+          "bill_of_lading"
+        ],
+        "field": "consignee.name",
+        "values": {
+          "commercial_invoice": "Tanga Agro Supplies Ltd",
+          "packing_list": "Tanga Agro Supplies Ltd",
+          "bill_of_lading": "Tanga Agrotech Distributors Ltd"
+        }
+      }
+    ],
+    "expected_check_outcomes": {
+      "C1": "FINDING",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "pass",
+      "C5": "pass",
+      "C6": "pass",
+      "C7": "pass",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": "Consignee name on the bill of lading differs from the invoice and packing list. Two pair findings (invoice and bill of lading, packing list and bill of lading) or one grouped finding are both acceptable."
+  },
+  {
+    "set": 8,
+    "layout": "B",
+    "description": "Invoice line 2: 500 x 8.40 is 4,200.00 but the line total is 4,500.00. The lines add up to the stated total (19,500.00), so only the line check fires. The invoice shows only a $ sign, so currency is null.",
+    "clean": false,
+    "expected_findings": [
+      {
+        "check_id": "C6",
+        "severity": "high",
+        "documents": [
+          "commercial_invoice"
+        ],
+        "field": "lines[2].line_total",
+        "values": {
+          "commercial_invoice": {
+            "quantity": 500,
+            "unit_price": 8.4,
+            "expected": 4200.0,
+            "stated": 4500.0
+          }
+        }
+      }
+    ],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "pass",
+      "C5": "pass",
+      "C6": "FINDING",
+      "C7": "pass",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": "Invoice line 2: 500 x 8.40 is 4,200.00 but the line total is 4,500.00. The lines add up to the stated total (19,500.00), so only the line check fires. The invoice shows only a $ sign, so currency is null."
+  },
+  {
+    "set": 9,
+    "layout": "B",
+    "description": "Two digits swapped in the container number on the bill of lading. The bill of lading number also fails the check digit.",
+    "clean": false,
+    "expected_findings": [
+      {
+        "check_id": "C7",
+        "severity": "high",
+        "documents": [
+          "packing_list",
+          "bill_of_lading"
+        ],
+        "field": "container_number",
+        "values": {
+          "packing_list": "HVCU5619280",
+          "bill_of_lading": "HVCU6519280"
+        }
+      }
+    ],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "pass",
+      "C5": "pass",
+      "C6": "pass",
+      "C7": "FINDING",
+      "C8": "pass",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": "Two digits swapped in the container number on the bill of lading. The bill of lading number also fails the check digit."
+  },
+  {
+    "set": 10,
+    "layout": "A",
+    "description": "HS code differs between the invoice (850440) and the packing list (850450).",
+    "clean": false,
+    "expected_findings": [
+      {
+        "check_id": "C8",
+        "severity": "medium",
+        "documents": [
+          "commercial_invoice",
+          "packing_list"
+        ],
+        "field": "hs_code",
+        "values": {
+          "commercial_invoice": "850440",
+          "packing_list": "850450"
+        }
+      }
+    ],
+    "expected_check_outcomes": {
+      "C1": "pass",
+      "C2": "pass",
+      "C3": "pass",
+      "C4": "pass",
+      "C5": "pass",
+      "C6": "pass",
+      "C7": "pass",
+      "C8": "FINDING",
+      "C9": "pass",
+      "C10": "skip"
+    },
+    "error_text": "HS code differs between the invoice (850440) and the packing list (850450)."
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "set": 5,
+  "documents": {
+    "commercial_invoice": {
+      "schema_version": "1",
+      "document_type": "commercial_invoice",
+      "invoice_number": "INV-2026-0105",
+      "invoice_date": "2026-09-10",
+      "seller": {
+        "name": "Shanghai AquaFlow Machinery Co., Ltd",
+        "address": "Unit 5, 1200 Jiangchuan Road, Minhang District, Shanghai, China"
+      },
+      "buyer": {
+        "name": "Arusha Water Systems Ltd",
+        "address": "Plot 6, Njiro Industrial Area, Arusha, Tanzania"
+      },
+      "importer": null,
+      "currency": "USD",
+      "lines": [
+        {
+          "description": "Industrial water pumps 1.5kW",
+          "hs_code": "841370",
+          "quantity": 100,
+          "unit": "pcs",
+          "unit_price": 185.0,
+          "line_total": 18500.0
+        }
+      ],
+      "subtotal": 18500.0,
+      "total_value": 18500.0
+    },
+    "packing_list": {
+      "schema_version": "1",
+      "document_type": "packing_list",
+      "invoice_reference": "INV-2026-0105",
+      "packing_date": "2026-09-12",
+      "shipper": {
+        "name": "Shanghai AquaFlow Machinery Co., Ltd",
+        "address": "Unit 5, 1200 Jiangchuan Road, Minhang District, Shanghai, China"
+      },
+      "consignee": {
+        "name": "Arusha Water Systems Ltd",
+        "address": "Plot 6, Njiro Industrial Area, Arusha, Tanzania"
+      },
+      "container_number": "AQRU8743525",
+      "packages": 100,
+      "package_type": "carton",
+      "lines": [
+        {
+          "description": "Industrial water pumps 1.5kW",
+          "quantity": 100,
+          "unit": "pcs",
+          "net_weight": 2200
+        }
+      ],
+      "hs_codes": [
+        "841370"
+      ],
+      "total_net_weight": 2200,
+      "total_gross_weight": 2500,
+      "weight_unit": "kg"
+    },
+    "bill_of_lading": {
+      "schema_version": "1",
+      "document_type": "bill_of_lading",
+      "bl_number": "SMPL2610057",
+      "bl_date": "2026-09-16",
+      "invoice_reference": null,
+      "shipper": {
+        "name": "Shanghai AquaFlow Machinery Co., Ltd",
+        "address": "Unit 5, 1200 Jiangchuan Road, Minhang District, Shanghai, China"
+      },
+      "consignee": {
+        "name": "Arusha Water Systems Ltd",
+        "address": "Plot 6, Njiro Industrial Area, Arusha, Tanzania"
+      },
+      "notify_party": null,
+      "container_numbers": [
+        "AQRU8743525"
+      ],
+      "seal_numbers": [
+        "SL786455"
+      ],
+      "packages": 100,
+      "package_type": "carton",
+      "description_of_goods": "Industrial water pumps",
+      "hs_codes": [],
+      "gross_weight": 2700,
+      "weight_unit": "kg",
+      "declared_value": null,
+      "currency": null,
+      "port_of_loading": "Shanghai, China",
+      "port_of_discharge": "Dar es Salaam, Tanzania"
+    }
+  },
+  "expected_findings": [
+    {
+      "check_id": "C3",
+      "severity": "high",
+      "documents": [
+        "packing_list",
+        "bill_of_lading"
+      ],
+      "field": "gross_weight",
+      "values": {
+        "packing_list": 2500,
+        "bill_of_lading": 2700
+      }
+    }
+  ],
+  "expected_check_outcomes": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "FINDING",
+    "C4": "pass",
+    "C5": "pass",
+    "C6": "pass",
+    "C7": "pass",
+    "C8": "pass",
+    "C9": "pass",
+    "C10": "skip"
+  }
+}

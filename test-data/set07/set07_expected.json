@@ -1,0 +1,140 @@
+{
+  "set": 7,
+  "documents": {
+    "commercial_invoice": {
+      "schema_version": "1",
+      "document_type": "commercial_invoice",
+      "invoice_number": "INV-2026-0107",
+      "invoice_date": "2026-09-12",
+      "seller": {
+        "name": "Qingdao GreenField Irrigation Co., Ltd",
+        "address": "66 Haier Road, Laoshan District, Qingdao, China"
+      },
+      "buyer": {
+        "name": "Tanga Agro Supplies Ltd",
+        "address": "Plot 3, Pangani Road, Tanga, Tanzania"
+      },
+      "importer": null,
+      "currency": "USD",
+      "lines": [
+        {
+          "description": "Drip irrigation kits",
+          "hs_code": "842481",
+          "quantity": 800,
+          "unit": "kits",
+          "unit_price": 24.5,
+          "line_total": 19600.0
+        },
+        {
+          "description": "Replacement emitters, pack of 50",
+          "hs_code": "842490",
+          "quantity": 400,
+          "unit": "packs",
+          "unit_price": 6.0,
+          "line_total": 2400.0
+        }
+      ],
+      "subtotal": null,
+      "total_value": 22000.0
+    },
+    "packing_list": {
+      "schema_version": "1",
+      "document_type": "packing_list",
+      "invoice_reference": "INV-2026-0107",
+      "packing_date": "2026-09-14",
+      "shipper": {
+        "name": "Qingdao GreenField Irrigation Co., Ltd",
+        "address": "66 Haier Road, Laoshan District, Qingdao, China"
+      },
+      "consignee": {
+        "name": "Tanga Agro Supplies Ltd",
+        "address": "Plot 3, Pangani Road, Tanga, Tanzania"
+      },
+      "container_number": "TGAU9267402",
+      "packages": 200,
+      "package_type": "carton",
+      "lines": [
+        {
+          "description": "Drip irrigation kits",
+          "quantity": 800,
+          "unit": "kits",
+          "net_weight": 1500
+        },
+        {
+          "description": "Replacement emitters, pack of 50",
+          "quantity": 400,
+          "unit": "packs",
+          "net_weight": 100
+        }
+      ],
+      "hs_codes": [
+        "842481",
+        "842490"
+      ],
+      "total_net_weight": 1600,
+      "total_gross_weight": 1760,
+      "weight_unit": "kg"
+    },
+    "bill_of_lading": {
+      "schema_version": "1",
+      "document_type": "bill_of_lading",
+      "bl_number": "SMPL2610077",
+      "bl_date": "2026-09-18",
+      "invoice_reference": "INV-2026-0107",
+      "shipper": {
+        "name": "Qingdao GreenField Irrigation Co., Ltd",
+        "address": "66 Haier Road, Laoshan District, Qingdao, China"
+      },
+      "consignee": {
+        "name": "Tanga Agrotech Distributors Ltd",
+        "address": "Plot 3, Pangani Road, Tanga, Tanzania"
+      },
+      "notify_party": null,
+      "container_numbers": [
+        "TGAU9267402"
+      ],
+      "seal_numbers": [
+        "SL161037"
+      ],
+      "packages": 200,
+      "package_type": "carton",
+      "description_of_goods": "Drip irrigation kits and spare emitters",
+      "hs_codes": [],
+      "gross_weight": 1760,
+      "weight_unit": "kg",
+      "declared_value": null,
+      "currency": null,
+      "port_of_loading": "Qingdao, China",
+      "port_of_discharge": "Dar es Salaam, Tanzania"
+    }
+  },
+  "expected_findings": [
+    {
+      "check_id": "C1",
+      "severity": "high",
+      "documents": [
+        "commercial_invoice",
+        "packing_list",
+        "bill_of_lading"
+      ],
+      "field": "consignee.name",
+      "values": {
+        "commercial_invoice": "Tanga Agro Supplies Ltd",
+        "packing_list": "Tanga Agro Supplies Ltd",
+        "bill_of_lading": "Tanga Agrotech Distributors Ltd"
+      }
+    }
+  ],
+  "expected_check_outcomes": {
+    "C1": "FINDING",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "pass",
+    "C5": "pass",
+    "C6": "pass",
+    "C7": "pass",
+    "C8": "pass",
+    "C9": "pass",
+    "C10": "skip"
+  }
+}

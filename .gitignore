@@ -1,0 +1,22 @@
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# uploads and data
+uploads/
+backups/
+*.sqlite
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# node
+node_modules/
+dist/
+build/
+# misc
+*.log
+.DS_Store

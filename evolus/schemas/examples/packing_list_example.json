@@ -1,0 +1,31 @@
+{
+  "schema_version": "1",
+  "document_type": "packing_list",
+  "invoice_reference": "INV-2026-0101",
+  "packing_date": "2026-09-08",
+  "shipper": {
+    "name": "Shenzhen BrightLite Electronics Co., Ltd",
+    "address": "Building 7, Harbor Industrial Zone, Nanshan District, Shenzhen, China"
+  },
+  "consignee": {
+    "name": "Kilimanjaro Imports Ltd",
+    "address": "Plot 14, Nyerere Road, Dar es Salaam, Tanzania"
+  },
+  "container_number": "BLUU4829157",
+  "packages": 500,
+  "package_type": "carton",
+  "lines": [
+    {
+      "description": "LED bulbs 9W",
+      "quantity": 5000,
+      "unit": "pcs",
+      "net_weight": 800
+    }
+  ],
+  "hs_codes": [
+    "853950"
+  ],
+  "total_net_weight": 800,
+  "total_gross_weight": 850,
+  "weight_unit": "kg"
+}

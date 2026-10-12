@@ -1,0 +1,159 @@
+{
+  "set": 8,
+  "documents": {
+    "commercial_invoice": {
+      "schema_version": "1",
+      "document_type": "commercial_invoice",
+      "invoice_number": "INV-2026-0108",
+      "invoice_date": "2026-09-13",
+      "seller": {
+        "name": "Tianjin ToolMaster Co., Ltd",
+        "address": "18 Binhai Industrial Avenue, Tianjin, China"
+      },
+      "buyer": {
+        "name": "Morogoro Hardware Mart Ltd",
+        "address": "Plot 21, Lumumba Street, Morogoro, Tanzania"
+      },
+      "importer": null,
+      "currency": null,
+      "lines": [
+        {
+          "description": "Combination pliers 8in",
+          "hs_code": "820320",
+          "quantity": 1000,
+          "unit": "pcs",
+          "unit_price": 12.0,
+          "line_total": 12000.0
+        },
+        {
+          "description": "Screwdriver set, 6 piece",
+          "hs_code": "820540",
+          "quantity": 500,
+          "unit": "sets",
+          "unit_price": 8.4,
+          "line_total": 4500.0
+        },
+        {
+          "description": "Spirit levels 600mm",
+          "hs_code": "901580",
+          "quantity": 200,
+          "unit": "pcs",
+          "unit_price": 15.0,
+          "line_total": 3000.0
+        }
+      ],
+      "subtotal": null,
+      "total_value": 19500.0
+    },
+    "packing_list": {
+      "schema_version": "1",
+      "document_type": "packing_list",
+      "invoice_reference": "INV-2026-0108",
+      "packing_date": "2026-09-15",
+      "shipper": {
+        "name": "Tianjin ToolMaster Co., Ltd",
+        "address": "18 Binhai Industrial Avenue, Tianjin, China"
+      },
+      "consignee": {
+        "name": "Morogoro Hardware Mart Ltd",
+        "address": "Plot 21, Lumumba Street, Morogoro, Tanzania"
+      },
+      "container_number": "DKZU3481724",
+      "packages": 180,
+      "package_type": "carton",
+      "lines": [
+        {
+          "description": "Combination pliers 8in",
+          "quantity": 1000,
+          "unit": "pcs",
+          "net_weight": 900
+        },
+        {
+          "description": "Screwdriver set, 6 piece",
+          "quantity": 500,
+          "unit": "sets",
+          "net_weight": 450
+        },
+        {
+          "description": "Spirit levels 600mm",
+          "quantity": 200,
+          "unit": "pcs",
+          "net_weight": 300
+        }
+      ],
+      "hs_codes": [
+        "820320",
+        "820540",
+        "901580"
+      ],
+      "total_net_weight": 1650,
+      "total_gross_weight": 1820,
+      "weight_unit": "kg"
+    },
+    "bill_of_lading": {
+      "schema_version": "1",
+      "document_type": "bill_of_lading",
+      "bl_number": "SMPL2610087",
+      "bl_date": "2026-09-19",
+      "invoice_reference": "INV-2026-0108",
+      "shipper": {
+        "name": "Tianjin ToolMaster Co., Ltd",
+        "address": "18 Binhai Industrial Avenue, Tianjin, China"
+      },
+      "consignee": {
+        "name": "Morogoro Hardware Mart Ltd",
+        "address": "Plot 21, Lumumba Street, Morogoro, Tanzania"
+      },
+      "notify_party": {
+        "name": "Bandari Clearing & Forwarding Ltd",
+        "address": "Mawasiliano Road 12, Dar es Salaam, Tanzania"
+      },
+      "container_numbers": [
+        "DKZU3481724"
+      ],
+      "seal_numbers": [
+        "SL298328"
+      ],
+      "packages": 180,
+      "package_type": "carton",
+      "description_of_goods": "Hand tools: pliers, screwdriver sets and spirit levels",
+      "hs_codes": [],
+      "gross_weight": 1820,
+      "weight_unit": "kg",
+      "declared_value": null,
+      "currency": null,
+      "port_of_loading": "Tianjin Xingang, China",
+      "port_of_discharge": "Dar es Salaam, Tanzania"
+    }
+  },
+  "expected_findings": [
+    {
+      "check_id": "C6",
+      "severity": "high",
+      "documents": [
+        "commercial_invoice"
+      ],
+      "field": "lines[2].line_total",
+      "values": {
+        "commercial_invoice": {
+          "quantity": 500,
+          "unit_price": 8.4,
+          "expected": 4200.0,
+          "stated": 4500.0
+        }
+      }
+    }
+  ],
+  "expected_check_outcomes": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "pass",
+    "C5": "pass",
+    "C6": "FINDING",
+    "C7": "pass",
+    "C8": "pass",
+    "C9": "pass",
+    "C10": "skip"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "set": 4,
+  "documents": {
+    "commercial_invoice": {
+      "schema_version": "1",
+      "document_type": "commercial_invoice",
+      "invoice_number": "INV-2026-0104",
+      "invoice_date": "2026-09-09",
+      "seller": {
+        "name": "Dongguan SunPeak Energy Co., Ltd",
+        "address": "12 Technology Park, Songshan Lake, Dongguan, China"
+      },
+      "buyer": {
+        "name": "Mwanza Solar Solutions Ltd",
+        "address": "Plot 31, Kenyatta Road, Mwanza, Tanzania"
+      },
+      "importer": null,
+      "currency": "USD",
+      "lines": [
+        {
+          "description": "Solar charge controllers 20A",
+          "hs_code": "853710",
+          "quantity": 2000,
+          "unit": "pcs",
+          "unit_price": 6.5,
+          "line_total": 13000.0
+        }
+      ],
+      "subtotal": 13000.0,
+      "total_value": 13000.0
+    },
+    "packing_list": {
+      "schema_version": "1",
+      "document_type": "packing_list",
+      "invoice_reference": "INV-2026-0104",
+      "packing_date": "2026-09-11",
+      "shipper": {
+        "name": "Dongguan SunPeak Energy Co., Ltd",
+        "address": "12 Technology Park, Songshan Lake, Dongguan, China"
+      },
+      "consignee": {
+        "name": "Mwanza Solar Solutions Ltd",
+        "address": "Plot 31, Kenyatta Road, Mwanza, Tanzania"
+      },
+      "container_number": "SPWU2904615",
+      "packages": 500,
+      "package_type": "carton",
+      "lines": [
+        {
+          "description": "Solar charge controllers 20A",
+          "quantity": 2000,
+          "unit": "pcs",
+          "net_weight": 1000
+        }
+      ],
+      "hs_codes": [
+        "853710"
+      ],
+      "total_net_weight": 1000,
+      "total_gross_weight": 1100,
+      "weight_unit": "kg"
+    },
+    "bill_of_lading": {
+      "schema_version": "1",
+      "document_type": "bill_of_lading",
+      "bl_number": "SMPL2610047",
+      "bl_date": "2026-09-15",
+      "invoice_reference": null,
+      "shipper": {
+        "name": "Dongguan SunPeak Energy Co., Ltd",
+        "address": "12 Technology Park, Songshan Lake, Dongguan, China"
+      },
+      "consignee": {
+        "name": "Mwanza Solar Solutions Ltd",
+        "address": "Plot 31, Kenyatta Road, Mwanza, Tanzania"
+      },
+      "notify_party": null,
+      "container_numbers": [
+        "SPWU2904615"
+      ],
+      "seal_numbers": [
+        "SL649164"
+      ],
+      "packages": 470,
+      "package_type": "carton",
+      "description_of_goods": "Solar charge controllers",
+      "hs_codes": [],
+      "gross_weight": 1100,
+      "weight_unit": "kg",
+      "declared_value": null,
+      "currency": null,
+      "port_of_loading": "Shenzhen Shekou, China",
+      "port_of_discharge": "Dar es Salaam, Tanzania"
+    }
+  },
+  "expected_findings": [
+    {
+      "check_id": "C4",
+      "severity": "high",
+      "documents": [
+        "packing_list",
+        "bill_of_lading"
+      ],
+      "field": "packages",
+      "values": {
+        "packing_list": 500,
+        "bill_of_lading": 470
+      }
+    }
+  ],
+  "expected_check_outcomes": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "FINDING",
+    "C5": "pass",
+    "C6": "pass",
+    "C7": "pass",
+    "C8": "pass",
+    "C9": "pass",
+    "C10": "skip"
+  }
+}

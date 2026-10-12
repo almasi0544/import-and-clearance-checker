@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "document_type": "bill_of_lading",
+  "bl_number": "SMPL2610017",
+  "bl_date": "2026-09-12",
+  "invoice_reference": null,
+  "shipper": {
+    "name": "Shenzhen BrightLite Electronics Co., Ltd",
+    "address": "Building 7, Harbor Industrial Zone, Nanshan District, Shenzhen, China"
+  },
+  "consignee": {
+    "name": "Kilimanjaro Imports Ltd",
+    "address": "Plot 14, Nyerere Road, Dar es Salaam, Tanzania"
+  },
+  "notify_party": null,
+  "container_numbers": [
+    "BLUU4829157"
+  ],
+  "seal_numbers": [
+    "SL237291"
+  ],
+  "packages": 500,
+  "package_type": "carton",
+  "description_of_goods": "LED bulbs",
+  "hs_codes": [],
+  "gross_weight": 850,
+  "weight_unit": "kg",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Shenzhen Yantian, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

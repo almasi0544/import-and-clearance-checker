@@ -1,0 +1,137 @@
+{
+  "set": 9,
+  "documents": {
+    "commercial_invoice": {
+      "schema_version": "1",
+      "document_type": "commercial_invoice",
+      "invoice_number": "INV-2026-0109",
+      "invoice_date": "2026-09-14",
+      "seller": {
+        "name": "Weifang PaperLine Co., Ltd",
+        "address": "41 Kuiwen Road, Weifang, China"
+      },
+      "buyer": {
+        "name": "Iringa School Supplies Ltd",
+        "address": "Plot 8, Uhuru Avenue, Iringa, Tanzania"
+      },
+      "importer": null,
+      "currency": "USD",
+      "lines": [
+        {
+          "description": "Notebooks A5, 80 pages",
+          "hs_code": "482020",
+          "quantity": 12000,
+          "unit": "pcs",
+          "unit_price": 0.45,
+          "line_total": 5400.0
+        },
+        {
+          "description": "Exercise books, 40 pages",
+          "hs_code": "482020",
+          "quantity": 8000,
+          "unit": "pcs",
+          "unit_price": 0.4,
+          "line_total": 3200.0
+        }
+      ],
+      "subtotal": null,
+      "total_value": 8600.0
+    },
+    "packing_list": {
+      "schema_version": "1",
+      "document_type": "packing_list",
+      "invoice_reference": "INV-2026-0109",
+      "packing_date": "2026-09-16",
+      "shipper": {
+        "name": "Weifang PaperLine Co., Ltd",
+        "address": "41 Kuiwen Road, Weifang, China"
+      },
+      "consignee": {
+        "name": "Iringa School Supplies Ltd",
+        "address": "Plot 8, Uhuru Avenue, Iringa, Tanzania"
+      },
+      "container_number": "HVCU5619280",
+      "packages": 400,
+      "package_type": "carton",
+      "lines": [
+        {
+          "description": "Notebooks A5, 80 pages",
+          "quantity": 12000,
+          "unit": "pcs",
+          "net_weight": 1900
+        },
+        {
+          "description": "Exercise books, 40 pages",
+          "quantity": 8000,
+          "unit": "pcs",
+          "net_weight": 1100
+        }
+      ],
+      "hs_codes": [
+        "482020"
+      ],
+      "total_net_weight": 3000,
+      "total_gross_weight": 3300,
+      "weight_unit": "kg"
+    },
+    "bill_of_lading": {
+      "schema_version": "1",
+      "document_type": "bill_of_lading",
+      "bl_number": "SMPL2610097",
+      "bl_date": "2026-09-20",
+      "invoice_reference": "INV-2026-0109",
+      "shipper": {
+        "name": "Weifang PaperLine Co., Ltd",
+        "address": "41 Kuiwen Road, Weifang, China"
+      },
+      "consignee": {
+        "name": "Iringa School Supplies Ltd",
+        "address": "Plot 8, Uhuru Avenue, Iringa, Tanzania"
+      },
+      "notify_party": null,
+      "container_numbers": [
+        "HVCU6519280"
+      ],
+      "seal_numbers": [
+        "SL435619"
+      ],
+      "packages": 400,
+      "package_type": "carton",
+      "description_of_goods": "Notebooks and exercise books",
+      "hs_codes": [],
+      "gross_weight": 3300,
+      "weight_unit": "kg",
+      "declared_value": null,
+      "currency": null,
+      "port_of_loading": "Qingdao, China",
+      "port_of_discharge": "Dar es Salaam, Tanzania"
+    }
+  },
+  "expected_findings": [
+    {
+      "check_id": "C7",
+      "severity": "high",
+      "documents": [
+        "packing_list",
+        "bill_of_lading"
+      ],
+      "field": "container_number",
+      "values": {
+        "packing_list": "HVCU5619280",
+        "bill_of_lading": "HVCU6519280"
+      }
+    }
+  ],
+  "expected_check_outcomes": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "pass",
+    "C5": "pass",
+    "C6": "pass",
+    "C7": "FINDING",
+    "C8": "pass",
+    "C9": "pass",
+    "C10": "skip"
+  }
+}

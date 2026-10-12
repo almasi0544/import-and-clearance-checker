@@ -1,0 +1,272 @@
+{
+  "set": 3,
+  "documents": {
+    "commercial_invoice": {
+      "schema_version": "1",
+      "document_type": "commercial_invoice",
+      "invoice_number": "INV-2026-0103",
+      "invoice_date": "2026-09-08",
+      "seller": {
+        "name": "Ningbo Hardware Trading Co., Ltd",
+        "address": "No. 305 Port Road, Beilun District, Ningbo, China"
+      },
+      "buyer": {
+        "name": "Dodoma Building Supplies Ltd",
+        "address": "Plot 9, Industrial Area, Dodoma, Tanzania"
+      },
+      "importer": null,
+      "currency": "USD",
+      "lines": [
+        {
+          "description": "Steel door hinges 4in",
+          "hs_code": "830210",
+          "quantity": 2000,
+          "unit": "pcs",
+          "unit_price": 0.65,
+          "line_total": 1300.0
+        },
+        {
+          "description": "Cylinder door locks",
+          "hs_code": "830140",
+          "quantity": 800,
+          "unit": "pcs",
+          "unit_price": 3.2,
+          "line_total": 2560.0
+        },
+        {
+          "description": "Brass padlocks 40mm",
+          "hs_code": "830110",
+          "quantity": 1500,
+          "unit": "pcs",
+          "unit_price": 1.85,
+          "line_total": 2775.0
+        },
+        {
+          "description": "Steel nails 2in, 1kg pack",
+          "hs_code": "731700",
+          "quantity": 3000,
+          "unit": "packs",
+          "unit_price": 0.95,
+          "line_total": 2850.0
+        },
+        {
+          "description": "Wood screws 4x40mm, box of 500",
+          "hs_code": "731812",
+          "quantity": 1200,
+          "unit": "boxes",
+          "unit_price": 2.4,
+          "line_total": 2880.0
+        },
+        {
+          "description": "Hex bolts M10",
+          "hs_code": "731815",
+          "quantity": 5000,
+          "unit": "pcs",
+          "unit_price": 0.18,
+          "line_total": 900.0
+        },
+        {
+          "description": "Claw hammers 16oz",
+          "hs_code": "820520",
+          "quantity": 600,
+          "unit": "pcs",
+          "unit_price": 3.9,
+          "line_total": 2340.0
+        },
+        {
+          "description": "Adjustable wrenches 10in",
+          "hs_code": "820411",
+          "quantity": 700,
+          "unit": "pcs",
+          "unit_price": 3.1,
+          "line_total": 2170.0
+        },
+        {
+          "description": "Paint brushes 3in",
+          "hs_code": "960340",
+          "quantity": 2500,
+          "unit": "pcs",
+          "unit_price": 0.55,
+          "line_total": 1375.0
+        },
+        {
+          "description": "Measuring tapes 5m",
+          "hs_code": "901780",
+          "quantity": 1000,
+          "unit": "pcs",
+          "unit_price": 1.2,
+          "line_total": 1200.0
+        },
+        {
+          "description": "Cotton work gloves",
+          "hs_code": "611610",
+          "quantity": 4000,
+          "unit": "pairs",
+          "unit_price": 0.7,
+          "line_total": 2800.0
+        },
+        {
+          "description": "Safety goggles",
+          "hs_code": "900490",
+          "quantity": 900,
+          "unit": "pcs",
+          "unit_price": 1.05,
+          "line_total": 945.0
+        }
+      ],
+      "subtotal": 24095.0,
+      "total_value": 24095.0
+    },
+    "packing_list": {
+      "schema_version": "1",
+      "document_type": "packing_list",
+      "invoice_reference": "INV-2026-0103",
+      "packing_date": "2026-09-10",
+      "shipper": {
+        "name": "Ningbo Hardware Trading Co., Ltd",
+        "address": "No. 305 Port Road, Beilun District, Ningbo, China"
+      },
+      "consignee": {
+        "name": "Dodoma Building Supplies Ltd",
+        "address": "Plot 9, Industrial Area, Dodoma, Tanzania"
+      },
+      "container_number": "NMKU6158370",
+      "packages": 320,
+      "package_type": "carton",
+      "lines": [
+        {
+          "description": "Steel door hinges 4in",
+          "quantity": 2000,
+          "unit": "pcs",
+          "net_weight": 240
+        },
+        {
+          "description": "Cylinder door locks",
+          "quantity": 800,
+          "unit": "pcs",
+          "net_weight": 320
+        },
+        {
+          "description": "Brass padlocks 40mm",
+          "quantity": 1500,
+          "unit": "pcs",
+          "net_weight": 225
+        },
+        {
+          "description": "Steel nails 2in, 1kg pack",
+          "quantity": 3000,
+          "unit": "packs",
+          "net_weight": 3000
+        },
+        {
+          "description": "Wood screws 4x40mm, box of 500",
+          "quantity": 1200,
+          "unit": "boxes",
+          "net_weight": 600
+        },
+        {
+          "description": "Hex bolts M10",
+          "quantity": 5000,
+          "unit": "pcs",
+          "net_weight": 450
+        },
+        {
+          "description": "Claw hammers 16oz",
+          "quantity": 600,
+          "unit": "pcs",
+          "net_weight": 510
+        },
+        {
+          "description": "Adjustable wrenches 10in",
+          "quantity": 700,
+          "unit": "pcs",
+          "net_weight": 560
+        },
+        {
+          "description": "Paint brushes 3in",
+          "quantity": 2500,
+          "unit": "pcs",
+          "net_weight": 250
+        },
+        {
+          "description": "Measuring tapes 5m",
+          "quantity": 1000,
+          "unit": "pcs",
+          "net_weight": 300
+        },
+        {
+          "description": "Cotton work gloves",
+          "quantity": 4000,
+          "unit": "pairs",
+          "net_weight": 480
+        },
+        {
+          "description": "Safety goggles",
+          "quantity": 900,
+          "unit": "pcs",
+          "net_weight": 135
+        }
+      ],
+      "hs_codes": [
+        "830210",
+        "830140",
+        "830110",
+        "731700",
+        "731812",
+        "731815",
+        "820520",
+        "820411",
+        "960340",
+        "901780",
+        "611610",
+        "900490"
+      ],
+      "total_net_weight": 7070,
+      "total_gross_weight": 7640,
+      "weight_unit": "kg"
+    },
+    "bill_of_lading": {
+      "schema_version": "1",
+      "document_type": "bill_of_lading",
+      "bl_number": "SMPL2610037",
+      "bl_date": "2026-09-14",
+      "invoice_reference": null,
+      "shipper": {
+        "name": "Ningbo Hardware Trading Co., Ltd",
+        "address": "No. 305 Port Road, Beilun District, Ningbo, China"
+      },
+      "consignee": {
+        "name": "Dodoma Building Supplies Ltd",
+        "address": "Plot 9, Industrial Area, Dodoma, Tanzania"
+      },
+      "notify_party": null,
+      "container_numbers": [
+        "NMKU6158370"
+      ],
+      "seal_numbers": [],
+      "packages": 320,
+      "package_type": "carton",
+      "description_of_goods": "Steel hinges, door locks, padlocks, nails, screws, bolts, hammers, wrenches, paint brushes, measuring tapes, gloves, goggles",
+      "hs_codes": [],
+      "gross_weight": 7640,
+      "weight_unit": "kg",
+      "declared_value": null,
+      "currency": null,
+      "port_of_loading": "Ningbo-Zhoushan, China",
+      "port_of_discharge": "Dar es Salaam, Tanzania"
+    }
+  },
+  "expected_findings": [],
+  "expected_check_outcomes": {
+    "C1": "pass",
+    "C2": "pass",
+    "C3": "pass",
+    "C4": "pass",
+    "C5": "pass",
+    "C6": "pass",
+    "C7": "pass",
+    "C8": "pass",
+    "C9": "pass",
+    "C10": "skip"
+  }
+}
