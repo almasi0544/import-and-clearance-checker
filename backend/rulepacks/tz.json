@@ -1,0 +1,8 @@
+{
+  "version": "tz-0.1",
+  "country": "TZ",
+  "weight_tolerance_percent": 1.0,
+  "money_tolerance": 0.01,
+  "name_similarity_threshold": 0.9,
+  "hs_code_digits": 6
+}
