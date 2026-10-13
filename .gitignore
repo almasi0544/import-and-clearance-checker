@@ -4,9 +4,10 @@
 !.env.example
 *.pem
 *.key
-# uploads and data
+# uploads, outputs and data
 uploads/
 backups/
+.local/
 *.sqlite
 # python
 __pycache__/
