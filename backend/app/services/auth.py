@@ -1,102 +1,77 @@
-from fastapi import HTTPException, Security, status
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-from typing import Optional, Dict, Any
+"""Login security: argon2 password hashing, signed tokens with an expiry, one generic failure message.
 
-security = HTTPBearer(auto_error=False)
+Passwords are never stored or logged. A token carries only the user id and its times: the role is read from the
+database on every request, so a role change or a deleted user takes effect at once."""
+import os
+import time
+from typing import Optional
 
-def get_current_user(credentials: Optional[HTTPAuthorizationCredentials] = Security(security)) -> Dict[str, Any]:
-    """
-    Reads and validates the bearer token, returning the current user dictionary.
-    Raises a 401 Unauthorized error if the token is missing or invalid.
-    """
-    if not credentials:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Missing authentication credentials",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    
-    token = credentials.credentials
-    
-    # For local development/testing, accept a mock token or decode a JWT
-    if token == "mock-token-admin":
-        return {
-            "id": "user-admin-001",
-            "email": "admin@example.com",
-            "role": "admin"
-        }
-    elif token == "mock-token-user":
-        return {
-            "id": "user-standard-002",
-            "email": "user@example.com",
-            "role": "user"
-        }
-    
-    # Real JWT or session token decoding can go here:
-    # user = decode_jwt_token(token)
-    # if not user:
-    #     raise HTTPException(status_code=401, detail="Invalid authentication token")
-    
-    # Fallback for unhandled tokens during testing
-    raise HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Invalid authentication token"
-    )
+import jwt
+from argon2 import PasswordHasher
 
-def require_role(required_role: str):
-    """
-    Dependency generator that checks if the authenticated user has the required role.
-    Raises a 403 Forbidden error if the role does not match.
-    """
-    def role_dependency(current_user: Dict[str, Any] = Security(get_current_user)) -> Dict[str, Any]:
-        user_role = current_user.get("role")
-        if user_role != required_role and user_role != "admin":  # Admins usually bypass role checks
-            raise HTTPException(
-                status_code=status.HTTP_403_FORBIDDEN,
-                detail=f"Operation not permitted. Required role: {required_role}"
-            )
-        return current_user
-    return role_dependency
+from app.errors import Unauthorized
+from app.services.audit import audit
 
-def get_shipment_for_user(shipment_id: str, user: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Fetches a shipment by ID and ensures the user has permission to view/modify it.
-    """
-    from app.db.database import get_db
-    db = get_db()
-    
-    shipments = db.execute_query("SELECT * FROM shipments WHERE id = %s;", (shipment_id,))
-    if not shipments:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Shipment not found"
-        )
-    
-    shipment = shipments[0]
-    
-    # Enforce ownership check (Admins can view any shipment, regular users only their own)
-    if shipment.get("owner_id") != user["id"] and user.get("role") != "admin":
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="Access denied to this shipment"
-        )
-        
-    return shipment
+ALGORITHM = "HS256"
+MIN_SECRET_LENGTH = 32
+_hasher = PasswordHasher()
+# Checked when the email is unknown, so the answer takes the same time and does not reveal which emails exist.
+_DUMMY_HASH = _hasher.hash("not-a-real-password")
 
-def audit(user: Dict[str, Any], action: str, object_type: str, object_id: str):
-    """
-    Appends an immutable audit event record to the database.
-    """
+
+def hash_password(password: str) -> str:
+    return _hasher.hash(password)
+
+
+def verify_password(password: str, password_hash: str) -> bool:
     try:
-        from app.db.database import get_db
-        db = get_db()
-        db.execute_insert(
-            """
-            INSERT INTO audit_events (user_id, action, object_type, object_id)
-            VALUES (%s, %s, %s, %s);
-            """,
-            (user.get("id"), action, object_type, object_id)
-        )
-    except Exception as e:
-        # Log error quietly or handle it so it doesn't break primary request flows
-        print(f"Audit log failed: {str(e)}")
+        return _hasher.verify(password_hash, password)
+    except Exception:  # wrong password, placeholder hash or damaged hash: all mean "no"
+        return False
+
+
+def _secret() -> str:
+    secret = os.environ.get("SECRET_KEY", "")
+    if len(secret) < MIN_SECRET_LENGTH:
+        raise RuntimeError("SECRET_KEY must be a random value of at least 32 characters.")
+    return secret
+
+
+def _lifetime_seconds() -> int:
+    try:
+        minutes = int(os.environ.get("TOKEN_EXPIRE_MINUTES", "60"))
+    except ValueError:
+        minutes = 60
+    return max(1, min(minutes, 24 * 60)) * 60
+
+
+def create_token(user_id: str, now: Optional[int] = None) -> str:
+    now = int(time.time()) if now is None else now
+    return jwt.encode({"sub": user_id, "iat": now, "exp": now + _lifetime_seconds()}, _secret(), algorithm=ALGORITHM)
+
+
+def read_token(token: str) -> str:
+    """The user id inside a valid token. Every problem gives the same 401, so the caller learns nothing."""
+    try:
+        claims = jwt.decode(token, _secret(), algorithms=[ALGORITHM], options={"require": ["exp", "sub"]})
+    except jwt.PyJWTError:
+        raise Unauthorized("Log in to continue.")
+    sub = claims.get("sub")
+    if not isinstance(sub, str) or not sub:
+        raise Unauthorized("Log in to continue.")
+    return sub
+
+
+def login(db, email, password) -> str:
+    """Check the credentials, write the audit row, return a token. One generic 401 for every failure."""
+    email = (email or "").strip().lower()
+    user = db.query_one("SELECT id, name, email, role, password_hash FROM users WHERE email = ?", (email,))
+    good = verify_password(password or "", user["password_hash"] if user else _DUMMY_HASH)
+    if user is None or not good:
+        if user is not None:
+            audit(db, {"id": user["id"]}, "login_failed")
+            db.commit()
+        raise Unauthorized("Wrong email or password.")
+    audit(db, {"id": user["id"]}, "login")
+    db.commit()
+    return create_token(user["id"])
