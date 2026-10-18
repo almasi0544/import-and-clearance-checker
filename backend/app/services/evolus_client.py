@@ -114,7 +114,11 @@ class EvolusClient:
         agent_id = agent_id or self.agent_id
         if not agent_id and "{agent_id}" in self.extract_path:
             raise EvolusError("No agent id was given (EVOLUS_AGENT_ID).")
-        endpoint = self.extract_path.format(agent_id=agent_id, extractor_id=extractor_id)
+        if ":" in str(extractor_id):      # "<extractor id>:<output structure id>", both copied from the Evolus API tab
+            ext, out = str(extractor_id).split(":", 1)
+            endpoint = f"/agents/{ext}/json/{out}/ask-file"
+        else:
+            endpoint = self.extract_path.format(agent_id=agent_id, extractor_id=extractor_id)
         return self._post_file(endpoint, path, shipment_id, document_id)
 
     # ---------- internals ----------
@@ -174,3 +178,4 @@ class EvolusClient:
             if attempt < self.max_retries:
                 self._sleep(min(2 ** attempt, 8))
         raise last_error
+
