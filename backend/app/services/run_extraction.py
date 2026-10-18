@@ -47,7 +47,8 @@ def run(set_number, env, repo_root, dry_run=False, client=None, out=print):
         pdf = set_dir / f"set{set_number:02d}_{part}.pdf"
         data = client.extract(env[var], pdf, shipment_id=f"set{set_number:02d}")
         (out_dir / f"{doc_type}.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
-        summary = summarise(compare_documents(expected[doc_type], data))
+        from app.services.normalize import normalize
+        summary = summarise(compare_documents(expected[doc_type], normalize(doc_type, data)))
         results[doc_type] = {"data": data, "summary": summary}
         out(f"\n=== {doc_type} ===")
         out(json.dumps(data, indent=2))
@@ -70,3 +71,5 @@ def main(argv=None):
     except EvolusError as e:
         print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
+
+
