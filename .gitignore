@@ -21,3 +21,6 @@ build/
 # misc
 *.log
 .DS_Store
+
+uploads/
+*.db
