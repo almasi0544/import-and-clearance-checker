@@ -1,0 +1,26 @@
+{
+  "bl_number": "SMPL2610027",
+  "bl_date": "2026-09-13",
+  "invoice_reference": "INV-2026-0102",
+  "shipper": "Guangzhou Textile Works Co., Ltd\n88 Pearl River Avenue, Haizhu District, Guangzhou, China",
+  "consignee": "Zanzibar Garments Distributors Ltd\nMalindi Street 22, Stone Town, Zanzibar, Tanzania",
+  "notify_party": "Same as Consignee",
+  "container_numbers": [
+    "QXTU7392044"
+  ],
+  "seal_numbers": [
+    "SL374582"
+  ],
+  "packages": 400,
+  "package_type": "CARTONS",
+  "description_of_goods": "Cotton T-shirts, HS 610910",
+  "hs_codes": [
+    "610910"
+  ],
+  "gross_weight": 2640.0,
+  "weight_unit": "KGS",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Guangzhou Nansha, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

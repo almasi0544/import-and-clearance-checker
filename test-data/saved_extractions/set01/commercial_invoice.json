@@ -1,0 +1,26 @@
+{
+  "invoice_number": "INV-2026-0101",
+  "invoice_date": "2026-09-06",
+  "seller": {
+    "name": "Shenzhen BrightLite Electronics Co., Ltd",
+    "address": "Building 7, Harbor Industrial Zone, Nanshan District, Shenzhen, China"
+  },
+  "buyer": {
+    "name": "Kilimanjaro Imports Ltd",
+    "address": "Plot 14, Nyerere Road, Dar es Salaam, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "LED bulbs 9W",
+      "hs_code": "853950",
+      "quantity": "5,000",
+      "unit": "pcs",
+      "unit_price": "0.84",
+      "line_total": "4,200.00"
+    }
+  ],
+  "subtotal": 4200.0,
+  "total_value": 4200.0
+}

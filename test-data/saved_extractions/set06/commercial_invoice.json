@@ -1,0 +1,26 @@
+{
+  "invoice_number": "INV-2026-0106",
+  "invoice_date": "2026-09-11",
+  "seller": {
+    "name": "Yangjiang Kitchenware Co., Ltd",
+    "address": "9 Dao Road, Jiangcheng District, Yangjiang, China"
+  },
+  "buyer": {
+    "name": "Mbeya Household Traders Ltd",
+    "address": "Plot 45, Uyole Road, Mbeya, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Stainless steel cutlery sets, 24 piece",
+      "hs_code": "821520",
+      "quantity": "5,000",
+      "unit": "sets",
+      "unit_price": "3.20",
+      "line_total": "16,000.00"
+    }
+  ],
+  "subtotal": 16000.0,
+  "total_value": 16000.0
+}

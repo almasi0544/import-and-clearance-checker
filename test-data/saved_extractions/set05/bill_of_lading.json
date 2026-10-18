@@ -1,0 +1,33 @@
+{
+  "bl_number": "SAMPLE BL 001",
+  "bl_date": "2024-01-15",
+  "invoice_reference": null,
+  "shipper": {
+    "name": "SAMPLE SHIPPER CO., LTD.",
+    "address": "123 SHIPPING STREET, SHANGHAI, CHINA"
+  },
+  "consignee": {
+    "name": "SAMPLE CONSIGNEE LTD.",
+    "address": "456 RECEIVING AVENUE, DAR ES SALAAM, TANZANIA"
+  },
+  "notify_party": {
+    "name": "SAME AS CONSIGNEE",
+    "address": ""
+  },
+  "container_numbers": [
+    "AQRU8743525"
+  ],
+  "seal_numbers": [
+    "SL786455"
+  ],
+  "packages": 100,
+  "package_type": "cartons",
+  "description_of_goods": "Industrial water pumps",
+  "hs_codes": [],
+  "gross_weight": 2700.0,
+  "weight_unit": "kg",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Shanghai, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

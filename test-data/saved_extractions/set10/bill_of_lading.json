@@ -1,0 +1,24 @@
+{
+  "bl_number": "SMPL2610107",
+  "bl_date": "2026-09-21",
+  "invoice_reference": null,
+  "shipper": "Shenzhen VoltEdge Technology Co., Ltd\nFloor 4, Tower B, Baoan Digital Park, Shenzhen, China",
+  "consignee": "Singida Mobile Accessories Ltd\nPlot 17, Market Street, Singida, Tanzania",
+  "notify_party": "Same as Consignee",
+  "container_numbers": [
+    "ZFPU7034964"
+  ],
+  "seal_numbers": [
+    "SL572910"
+  ],
+  "packages": 150,
+  "package_type": "cartons",
+  "description_of_goods": "Mobile phone chargers",
+  "hs_codes": [],
+  "gross_weight": 510.0,
+  "weight_unit": "kg",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Shenzhen Yantian, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

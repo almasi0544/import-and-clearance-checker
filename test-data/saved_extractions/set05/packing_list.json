@@ -1,0 +1,25 @@
+{
+  "invoiceReference": "INV-2026-0105",
+  "packingDate": "2026-09-12",
+  "shipper": {
+    "name": "Shanghai AquaFlow Machinery Co., Ltd",
+    "address": "Unit 5, 1200 Jiangchuan Road, Minhang District, Shanghai, China"
+  },
+  "consignee": {
+    "name": "Arusha Water Systems Ltd",
+    "address": "Plot 6, Njiro Industrial Area, Arusha, Tanzania"
+  },
+  "containerNumber": "AQRU8743525",
+  "packages": 100,
+  "packageType": "cartons",
+  "lines": [
+    {
+      "description": "Industrial water pumps 1.5kW HS Code: 841370",
+      "quantity": "100 pcs",
+      "netWeight": "2,200.00"
+    }
+  ],
+  "totalNetWeight": "2,200.00",
+  "totalGrossWeight": "2,500.00",
+  "weightUnit": "kg"
+}

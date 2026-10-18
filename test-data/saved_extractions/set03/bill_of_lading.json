@@ -1,0 +1,22 @@
+{
+  "bl_number": "SMPL2610037",
+  "bl_date": "2026-09-14",
+  "invoice_reference": null,
+  "shipper": "Ningbo Hardware Trading Co., Ltd\nNo. 305 Port Road, Beilun District, Ningbo, China",
+  "consignee": "Dodoma Building Supplies Ltd\nPlot 9, Industrial Area, Dodoma, Tanzania",
+  "notify_party": "Same as Consignee",
+  "container_numbers": [
+    "NMKU6158370"
+  ],
+  "seal_numbers": [],
+  "packages": 320,
+  "package_type": "cartons",
+  "description_of_goods": "Steel hinges, door locks, padlocks, nails, screws, bolts, hammers, wrenches, paint brushes, measuring tapes, gloves, goggles",
+  "hs_codes": [],
+  "gross_weight": 7640.0,
+  "weight_unit": "kg",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Ningbo-Zhoushan, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

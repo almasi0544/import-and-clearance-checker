@@ -1,0 +1,114 @@
+{
+  "invoice_number": "INV-2026-0103",
+  "invoice_date": "2026-09-08",
+  "seller": {
+    "name": "Ningbo Hardware Trading Co., Ltd",
+    "address": "No. 305 Port Road, Beilun District, Ningbo, China"
+  },
+  "buyer": {
+    "name": "Dodoma Building Supplies Ltd",
+    "address": "Plot 9, Industrial Area, Dodoma, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Steel door hinges 4in",
+      "hs_code": "830210",
+      "quantity": "2,000",
+      "unit": "pcs",
+      "unit_price": "0.65",
+      "line_total": "1,300.00"
+    },
+    {
+      "description": "Cylinder door locks",
+      "hs_code": "830140",
+      "quantity": "800",
+      "unit": "pcs",
+      "unit_price": "3.20",
+      "line_total": "2,560.00"
+    },
+    {
+      "description": "Brass padlocks 40mm",
+      "hs_code": "830110",
+      "quantity": "1,500",
+      "unit": "pcs",
+      "unit_price": "1.85",
+      "line_total": "2,775.00"
+    },
+    {
+      "description": "Steel nails 2in, 1kg pack",
+      "hs_code": "731700",
+      "quantity": "3,000",
+      "unit": "packs",
+      "unit_price": "0.95",
+      "line_total": "2,850.00"
+    },
+    {
+      "description": "Wood screws 4x40mm, box of 500",
+      "hs_code": "731812",
+      "quantity": "1,200",
+      "unit": "boxes",
+      "unit_price": "2.40",
+      "line_total": "2,880.00"
+    },
+    {
+      "description": "Hex bolts M10",
+      "hs_code": "731815",
+      "quantity": "5,000",
+      "unit": "pcs",
+      "unit_price": "0.18",
+      "line_total": "900.00"
+    },
+    {
+      "description": "Claw hammers 16oz",
+      "hs_code": "820520",
+      "quantity": "600",
+      "unit": "pcs",
+      "unit_price": "3.90",
+      "line_total": "2,340.00"
+    },
+    {
+      "description": "Adjustable wrenches 10in",
+      "hs_code": "820411",
+      "quantity": "700",
+      "unit": "pcs",
+      "unit_price": "3.10",
+      "line_total": "2,170.00"
+    },
+    {
+      "description": "Paint brushes 3in",
+      "hs_code": "960340",
+      "quantity": "2,500",
+      "unit": "pcs",
+      "unit_price": "0.55",
+      "line_total": "1,375.00"
+    },
+    {
+      "description": "Measuring tapes 5m",
+      "hs_code": "901780",
+      "quantity": "1,000",
+      "unit": "pcs",
+      "unit_price": "1.20",
+      "line_total": "1,200.00"
+    },
+    {
+      "description": "Cotton work gloves",
+      "hs_code": "611610",
+      "quantity": "4,000",
+      "unit": "pairs",
+      "unit_price": "0.70",
+      "line_total": "2,800.00"
+    },
+    {
+      "description": "Safety goggles",
+      "hs_code": "900490",
+      "quantity": "900",
+      "unit": "pcs",
+      "unit_price": "1.05",
+      "line_total": "945.00"
+    }
+  ],
+  "subtotal": 24095.0,
+  "total_value": 24095.0
+}

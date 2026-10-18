@@ -1,0 +1,41 @@
+{
+  "invoiceReference": "INV-2026-0108",
+  "packingDate": "2026-09-15",
+  "shipper": {
+    "name": "Tianjin ToolMaster Co., Ltd",
+    "address": "18 Binhai Industrial Avenue, Tianjin, China"
+  },
+  "consignee": {
+    "name": "Morogoro Hardware Mart Ltd",
+    "address": "Plot 21, Lumumba Street, Morogoro, Tanzania"
+  },
+  "containerNumber": "DKZU3481724",
+  "packages": 180,
+  "packageType": "CARTONS",
+  "lines": [
+    {
+      "description": "Combination pliers 8in",
+      "hsCode": "820320",
+      "quantity": 1000,
+      "unit": "pcs",
+      "netWeight": 900.0
+    },
+    {
+      "description": "Screwdriver set, 6 piece",
+      "hsCode": "820540",
+      "quantity": 500,
+      "unit": "sets",
+      "netWeight": 450.0
+    },
+    {
+      "description": "Spirit levels 600mm",
+      "hsCode": "901580",
+      "quantity": 200,
+      "unit": "pcs",
+      "netWeight": 300.0
+    }
+  ],
+  "totalNetWeight": 1650.0,
+  "totalGrossWeight": 1820.0,
+  "weightUnit": "kg"
+}

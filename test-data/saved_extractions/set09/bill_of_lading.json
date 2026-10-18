@@ -1,0 +1,24 @@
+{
+  "bl_number": "SMPL2610097",
+  "bl_date": "2026-09-20",
+  "invoice_reference": "INV-2026-0109",
+  "shipper": "Weifang PaperLine Co., Ltd\n41 Kuiwen Road, Weifang, China",
+  "consignee": "Iringa School Supplies Ltd\nPlot 8, Uhuru Avenue, Iringa, Tanzania",
+  "notify_party": "Same as Consignee",
+  "container_numbers": [
+    "HVCU6519280"
+  ],
+  "seal_numbers": [
+    "SL435619"
+  ],
+  "packages": 400,
+  "package_type": "CARTONS",
+  "description_of_goods": "Notebooks and exercise books",
+  "hs_codes": [],
+  "gross_weight": 3300.0,
+  "weight_unit": "KGS",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Qingdao, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

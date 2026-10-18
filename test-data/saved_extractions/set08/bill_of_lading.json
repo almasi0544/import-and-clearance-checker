@@ -1,0 +1,24 @@
+{
+  "bl_number": "SMPL2610087",
+  "bl_date": "2026-09-19",
+  "invoice_reference": "INV-2026-0108",
+  "shipper": "Tianjin ToolMaster Co., Ltd\n18 Binhai Industrial Avenue, Tianjin, China",
+  "consignee": "Morogoro Hardware Mart Ltd\nPlot 21, Lumumba Street, Morogoro, Tanzania",
+  "notify_party": "Bandari Clearing & Forwarding Ltd\nMawasiliano Road 12, Dar es Salaam, Tanzania",
+  "container_numbers": [
+    "DKZU3481724"
+  ],
+  "seal_numbers": [
+    "SL298328"
+  ],
+  "packages": 180,
+  "package_type": "CARTONS",
+  "description_of_goods": "Hand tools: pliers, screwdriver sets and spirit levels",
+  "hs_codes": [],
+  "gross_weight": 1820.0,
+  "weight_unit": "KGS",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Tianjin Xingang, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

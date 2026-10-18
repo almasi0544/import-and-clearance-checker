@@ -34,7 +34,9 @@ def main(argv=None):
         done = run(n, os.environ, ROOT, out=lambda *a: None)
         raw = {t: r["data"] for t, r in done["results"].items()}
     else:
-        folder = ROOT / ".local" / "extractions" / f"set{n:02d}"
+        local = ROOT / ".local" / "extractions" / f"set{n:02d}"
+        saved = ROOT / "test-data" / "saved_extractions" / f"set{n:02d}"
+        folder = local if local.is_dir() else saved
         if not folder.is_dir():
             print(f"No saved extraction for set {n}. Run:  python backend/scripts/extract_set.py {n}")
             return 1
@@ -61,3 +63,4 @@ def main(argv=None):
 
 if __name__ == "__main__":
     sys.exit(main())
+

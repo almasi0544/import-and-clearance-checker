@@ -1,0 +1,26 @@
+{
+  "invoice_number": "INV-2026-0102",
+  "invoice_date": "2026-09-07",
+  "seller": {
+    "name": "Guangzhou Textile Works Co., Ltd",
+    "address": "88 Pearl River Avenue, Haizhu District, Guangzhou, China"
+  },
+  "buyer": {
+    "name": "Zanzibar Garments Distributors Ltd",
+    "address": "Malindi Street 22, Stone Town, Zanzibar, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Cotton T-shirts, assorted sizes",
+      "hs_code": "610910",
+      "quantity": "12,000",
+      "unit": "pcs",
+      "unit_price": "2.15",
+      "line_total": "25,800.00"
+    }
+  ],
+  "subtotal": 25800.0,
+  "total_value": 25800.0
+}

@@ -1,0 +1,26 @@
+{
+  "invoice_number": "INV-2026-0105",
+  "invoice_date": "2026-09-10",
+  "seller": {
+    "name": "Shanghai AquaFlow Machinery Co., Ltd",
+    "address": "Unit 5, 1200 Jiangchuan Road, Minhang District, Shanghai, China"
+  },
+  "buyer": {
+    "name": "Arusha Water Systems Ltd",
+    "address": "Plot 6, Njiro Industrial Area, Arusha, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Industrial water pumps 1.5kW",
+      "hs_code": "841370",
+      "quantity": 100,
+      "unit": "pcs",
+      "unit_price": 185.0,
+      "line_total": 18500.0
+    }
+  ],
+  "subtotal": 18500.0,
+  "total_value": 18500.0
+}

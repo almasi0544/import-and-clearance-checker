@@ -1,0 +1,86 @@
+{
+  "invoiceReference": "INV-2026-0103",
+  "packingDate": "2026-09-10",
+  "shipper": "Ningbo Hardware Trading Co., Ltd\nNo. 305 Port Road, Beilun District, Ningbo, China",
+  "consignee": "Dodoma Building Supplies Ltd\nPlot 9, Industrial Area, Dodoma, Tanzania",
+  "containerNumber": "NMKU6158370",
+  "packages": 320,
+  "packageType": "cartons",
+  "lines": [
+    {
+      "description": "Steel door hinges 4in HS Code: 830210",
+      "quantity": "2,000",
+      "unit": "pcs",
+      "netWeight": "240.00"
+    },
+    {
+      "description": "Cylinder door locks HS Code: 830140",
+      "quantity": "800",
+      "unit": "pcs",
+      "netWeight": "320.00"
+    },
+    {
+      "description": "Brass padlocks 40mm HS Code: 830110",
+      "quantity": "1,500",
+      "unit": "pcs",
+      "netWeight": "225.00"
+    },
+    {
+      "description": "Steel nails 2in, 1kg pack HS Code: 731700",
+      "quantity": "3,000",
+      "unit": "packs",
+      "netWeight": "3,000.00"
+    },
+    {
+      "description": "Wood screws 4x40mm, box of 500 HS Code: 731812",
+      "quantity": "1,200",
+      "unit": "boxes",
+      "netWeight": "600.00"
+    },
+    {
+      "description": "Hex bolts M10 HS Code: 731815",
+      "quantity": "5,000",
+      "unit": "pcs",
+      "netWeight": "450.00"
+    },
+    {
+      "description": "Claw hammers 16oz HS Code: 820520",
+      "quantity": "600",
+      "unit": "pcs",
+      "netWeight": "510.00"
+    },
+    {
+      "description": "Adjustable wrenches 10in HS Code: 820411",
+      "quantity": "700",
+      "unit": "pcs",
+      "netWeight": "560.00"
+    },
+    {
+      "description": "Paint brushes 3in HS Code: 960340",
+      "quantity": "2,500",
+      "unit": "pcs",
+      "netWeight": "250.00"
+    },
+    {
+      "description": "Measuring tapes 5m HS Code: 901780",
+      "quantity": "1,000",
+      "unit": "pcs",
+      "netWeight": "300.00"
+    },
+    {
+      "description": "Cotton work gloves HS Code: 611610",
+      "quantity": "4,000",
+      "unit": "pairs",
+      "netWeight": "480.00"
+    },
+    {
+      "description": "Safety goggles HS Code: 900490",
+      "quantity": "900",
+      "unit": "pcs",
+      "netWeight": "135.00"
+    }
+  ],
+  "totalNetWeight": 7070.0,
+  "totalGrossWeight": 7640.0,
+  "weightUnit": "kg"
+}

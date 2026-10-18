@@ -1,0 +1,24 @@
+{
+  "bl_number": "SMPL2610077",
+  "bl_date": "2026-09-18",
+  "invoice_reference": "INV-2026-0107",
+  "shipper": "Tanga Agrotech Distributors Ltd\nPlot 3, Pangani Road, Tanga, Tanzania",
+  "consignee": "Same as Consignee",
+  "notify_party": null,
+  "container_numbers": [
+    "TGAU9267402"
+  ],
+  "seal_numbers": [
+    "SL161037"
+  ],
+  "packages": 200,
+  "package_type": "CARTONS",
+  "description_of_goods": "Drip irrigation kits and spare emitters",
+  "hs_codes": [],
+  "gross_weight": 1760.0,
+  "weight_unit": "KGS",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Qingdao, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

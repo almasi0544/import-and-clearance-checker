@@ -1,0 +1,26 @@
+{
+  "invoiceReference": "INV-2026-0106",
+  "packingDate": "2026-09-13",
+  "shipper": {
+    "name": "Yangjiang Kitchenware Co., Ltd",
+    "address": "9 Dao Road, Jiangcheng District, Yangjiang, China"
+  },
+  "consignee": {
+    "name": "Mbeya Household Traders Ltd",
+    "address": "Plot 45, Uyole Road, Mbeya, Tanzania"
+  },
+  "containerNumber": "YJLU1506833",
+  "packages": 250,
+  "packageType": "CARTONS",
+  "lines": [
+    {
+      "description": "Stainless steel cutlery sets, 24 piece",
+      "quantity": "4,800",
+      "unit": "sets",
+      "netWeight": "1,500.00"
+    }
+  ],
+  "totalNetWeight": 1500.0,
+  "totalGrossWeight": 1650.0,
+  "weightUnit": "kg"
+}

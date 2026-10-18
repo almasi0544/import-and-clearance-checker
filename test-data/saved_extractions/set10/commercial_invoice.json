@@ -1,0 +1,26 @@
+{
+  "invoice_number": "INV-2026-0110",
+  "invoice_date": "2026-09-15",
+  "seller": {
+    "name": "Shenzhen VoltEdge Technology Co., Ltd",
+    "address": "Floor 4, Tower B, Baoan Digital Park, Shenzhen, China"
+  },
+  "buyer": {
+    "name": "Singida Mobile Accessories Ltd",
+    "address": "Plot 17, Market Street, Singida, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Mobile phone chargers 20W",
+      "hs_code": "850440",
+      "quantity": "3,000",
+      "unit": "pcs",
+      "unit_price": "2.90",
+      "line_total": "8,700.00"
+    }
+  ],
+  "subtotal": 8700.0,
+  "total_value": 8700.0
+}

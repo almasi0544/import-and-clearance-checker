@@ -1,0 +1,26 @@
+{
+  "invoice_number": "INV-2026-0104",
+  "invoice_date": "2026-09-09",
+  "seller": {
+    "name": "Dongguan SunPeak Energy Co., Ltd",
+    "address": "12 Technology Park, Songshan Lake, Dongguan, China"
+  },
+  "buyer": {
+    "name": "Mwanza Solar Solutions Ltd",
+    "address": "Plot 31, Kenyatta Road, Mwanza, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Solar charge controllers 20A",
+      "hs_code": "853710",
+      "quantity": "2,000",
+      "unit": "pcs",
+      "unit_price": "6.50",
+      "line_total": "13,000.00"
+    }
+  ],
+  "subtotal": 13000.0,
+  "total_value": 13000.0
+}

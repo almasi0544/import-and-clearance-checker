@@ -1,0 +1,34 @@
+{
+  "invoice_number": "INV-2026-0109",
+  "invoice_date": "2026-09-14",
+  "seller": {
+    "name": "Weifang PaperLine Co., Ltd",
+    "address": "41 Kuiwen Road, Weifang, China"
+  },
+  "buyer": {
+    "name": "Iringa School Supplies Ltd",
+    "address": "Plot 8, Uhuru Avenue, Iringa, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Notebooks A5, 80 pages",
+      "hs_code": "482020",
+      "quantity": "12,000",
+      "unit": "pcs",
+      "unit_price": "0.45",
+      "line_total": "5,400.00"
+    },
+    {
+      "description": "Exercise books, 40 pages",
+      "hs_code": "482020",
+      "quantity": "8,000",
+      "unit": "pcs",
+      "unit_price": "0.40",
+      "line_total": "3,200.00"
+    }
+  ],
+  "subtotal": 8600.0,
+  "total_value": 8600.0
+}

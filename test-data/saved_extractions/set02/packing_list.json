@@ -1,0 +1,26 @@
+{
+  "invoiceReference": "INV-2026-0102",
+  "packingDate": "2026-09-09",
+  "shipper": {
+    "name": "Guangzhou Textile Works Co., Ltd",
+    "address": "88 Pearl River Avenue, Haizhu District, Guangzhou, China"
+  },
+  "consignee": {
+    "name": "Zanzibar Garments Distributors Ltd",
+    "address": "Malindi Street 22, Stone Town, Zanzibar, Tanzania"
+  },
+  "containerNumber": null,
+  "packages": 400,
+  "packageType": "CARTONS",
+  "lines": [
+    {
+      "description": "Cotton T-shirts, assorted sizes",
+      "quantity": "12,000",
+      "unit": "pcs",
+      "netWeight": "2,400.00"
+    }
+  ],
+  "totalNetWeight": 2400.0,
+  "totalGrossWeight": 2640.0,
+  "weightUnit": "kg"
+}

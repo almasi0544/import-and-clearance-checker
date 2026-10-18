@@ -1,0 +1,26 @@
+{
+  "invoiceReference": "INV-2026-0109",
+  "packingDate": "2026-09-16",
+  "shipper": "Weifang PaperLine Co., Ltd\n41 Kuiwen Road, Weifang, China",
+  "consignee": "Iringa School Supplies Ltd\nPlot 8, Uhuru Avenue, Iringa, Tanzania",
+  "containerNumber": "HVCU5619280",
+  "packages": 400,
+  "packageType": "CARTONS",
+  "lines": [
+    {
+      "description": "Notebooks A5, 80 pages",
+      "quantity": 12000,
+      "unit": "pcs",
+      "netWeight": 1900.0
+    },
+    {
+      "description": "Exercise books, 40 pages",
+      "quantity": 8000,
+      "unit": "pcs",
+      "netWeight": 1100.0
+    }
+  ],
+  "totalNetWeight": 3000.0,
+  "totalGrossWeight": 3300.0,
+  "weightUnit": "kg"
+}

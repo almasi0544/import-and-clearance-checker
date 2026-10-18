@@ -1,0 +1,42 @@
+{
+  "invoice_number": "INV-2026-0108",
+  "invoice_date": "2026-09-13",
+  "seller": {
+    "name": "Tianjin ToolMaster Co., Ltd",
+    "address": "18 Binhai Industrial Avenue, Tianjin, China"
+  },
+  "buyer": {
+    "name": "Morogoro Hardware Mart Ltd",
+    "address": "Plot 21, Lumumba Street, Morogoro, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Combination pliers 8in",
+      "hs_code": "820320",
+      "quantity": "1,000",
+      "unit": "pcs",
+      "unit_price": "$12.00",
+      "line_total": "$12,000.00"
+    },
+    {
+      "description": "Screwdriver set, 6 piece",
+      "hs_code": "820540",
+      "quantity": "500",
+      "unit": "sets",
+      "unit_price": "$8.40",
+      "line_total": "$4,500.00"
+    },
+    {
+      "description": "Spirit levels 600mm",
+      "hs_code": "901580",
+      "quantity": "200",
+      "unit": "pcs",
+      "unit_price": "$15.00",
+      "line_total": "$3,000.00"
+    }
+  ],
+  "subtotal": 19500.0,
+  "total_value": 19500.0
+}

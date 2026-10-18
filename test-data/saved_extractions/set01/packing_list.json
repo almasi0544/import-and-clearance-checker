@@ -1,0 +1,26 @@
+{
+  "invoiceReference": "INV-2026-0101",
+  "packingDate": "2026-09-08",
+  "shipper": {
+    "name": "Shenzhen BrightLite Electronics Co., Ltd",
+    "address": "Building 7, Harbor Industrial Zone, Nanshan District, Shenzhen, China"
+  },
+  "consignee": {
+    "name": "Kilimanjaro Imports Ltd",
+    "address": "Plot 14, Nyerere Road, Dar es Salaam, Tanzania"
+  },
+  "containerNumber": "BLUU4829157",
+  "packages": 500,
+  "packageType": "cartons",
+  "lines": [
+    {
+      "description": "LED bulbs 9W HS Code: 853950",
+      "quantity": 5000,
+      "unit": "pcs",
+      "netWeight": 800.0
+    }
+  ],
+  "totalNetWeight": 800.0,
+  "totalGrossWeight": 850.0,
+  "weightUnit": "kg"
+}

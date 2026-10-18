@@ -1,0 +1,24 @@
+{
+  "bl_number": "SMPL2610067",
+  "bl_date": "2026-09-17",
+  "invoice_reference": "INV-2026-0106",
+  "shipper": "Yangjiang Kitchenware Co., Ltd\n9 Dao Road, Jiangcheng District, Yangjiang, China",
+  "consignee": "Mbeya Household Traders Ltd\nPlot 45, Uyole Road, Mbeya, Tanzania",
+  "notify_party": "Bandari Clearing & Forwarding Ltd\nMawasiliano Road 12, Dar es Salaam, Tanzania",
+  "container_numbers": [
+    "YJLU1506833"
+  ],
+  "seal_numbers": [
+    "SL923746"
+  ],
+  "packages": 250,
+  "package_type": "CARTONS",
+  "description_of_goods": "Stainless steel cutlery sets",
+  "hs_codes": [],
+  "gross_weight": 1650.0,
+  "weight_unit": "KGS",
+  "declared_value": null,
+  "currency": null,
+  "port_of_loading": "Guangzhou Nansha, China",
+  "port_of_discharge": "Dar es Salaam, Tanzania"
+}

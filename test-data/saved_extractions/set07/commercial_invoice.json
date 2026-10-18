@@ -1,0 +1,34 @@
+{
+  "invoice_number": "INV-2026-0107",
+  "invoice_date": "2026-09-12",
+  "seller": {
+    "name": "Qingdao GreenField Irrigation Co., Ltd",
+    "address": "66 Haier Road, Laoshan District, Qingdao, China"
+  },
+  "buyer": {
+    "name": "Tanga Agro Supplies Ltd",
+    "address": "Plot 3, Pangani Road, Tanga, Tanzania"
+  },
+  "importer": null,
+  "currency": "USD",
+  "lines": [
+    {
+      "description": "Drip irrigation kits",
+      "hs_code": "842481",
+      "quantity": 800,
+      "unit": "kits",
+      "unit_price": 24.5,
+      "line_total": 19600.0
+    },
+    {
+      "description": "Replacement emitters, pack of 50",
+      "hs_code": "842490",
+      "quantity": 400,
+      "unit": "packs",
+      "unit_price": 6.0,
+      "line_total": 2400.0
+    }
+  ],
+  "subtotal": 22000.0,
+  "total_value": 22000.0
+}

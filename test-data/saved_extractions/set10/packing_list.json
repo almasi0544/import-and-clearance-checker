@@ -1,0 +1,20 @@
+{
+  "invoiceReference": "INV-2026-0110",
+  "packingDate": "2026-09-17",
+  "shipper": "Shenzhen VoltEdge Technology Co., Ltd\nFloor 4, Tower B, Baoan Digital Park, Shenzhen, China",
+  "consignee": "Singida Mobile Accessories Ltd\nPlot 17, Market Street, Singida, Tanzania",
+  "containerNumber": "ZFPU7034964",
+  "packages": 150,
+  "packageType": "cartons",
+  "lines": [
+    {
+      "description": "Mobile phone chargers 20W HS Code: 850450",
+      "quantity": 3000,
+      "unit": "pcs",
+      "netWeight": 450.0
+    }
+  ],
+  "totalNetWeight": 450.0,
+  "totalGrossWeight": 510.0,
+  "weightUnit": "kg"
+}
